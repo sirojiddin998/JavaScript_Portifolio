@@ -46,6 +46,7 @@ header .navigation a:hover {
 }
 section {
   padding: 100px;
+  width: 100%;
 }
 .main {
   position: relative;
@@ -59,7 +60,7 @@ section {
   background-attachment: fixed;
 }
 .main .content {
-  min-width: 800px;
+  min-width: 100%;
 }
 .main .content h2 {
   color: #fff;
@@ -165,6 +166,7 @@ section {
 .about .content {
   position: relative;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -181,6 +183,7 @@ section {
 .about .content .img-card {
   position: relative;
   width: 100%;
+
   min-height: 550px;
 }
 .about .content .img-card img {
@@ -460,7 +463,11 @@ footer p {
   margin-top: 14px;
 }
 /* Media */
-@media (max-width: 1129px) {
+@media (max-width: 1200px) {
+  main {
+    width: 100%;
+  }
+
   header {
     padding: 12px 20px;
   }
@@ -551,29 +558,34 @@ footer p {
   .contact-form {
     padding: 35px 40px;
   }
-  .scrollTotob {
-    z-index: 999;
-    position: fixed;
-    background: red;
-    color: #fff;
-    width: 45px;
-    height: 45px;
-    right: 0;
-    bottom: 10px;
-    font-size: 22px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 3px;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.3s ease;
+  .about .content .img-card {
+    min-height: 250px;
   }
-  .scrollTotob.active {
-    right: 20px;
-    opacity: 1;
+  .about .content .img-card img {
+    height: 250px;
   }
 }
-
+.scrollTotob {
+  z-index: 999;
+  position: fixed;
+  background: red;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.scrollTotob.active {
+  right: 20px;
+  opacity: 1;
+}
 .reveal {
   position: relative;
   transform: translateY(50px);
