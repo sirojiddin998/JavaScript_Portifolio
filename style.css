@@ -558,6 +558,8 @@ footer p {
   .contact-form {
     padding: 35px 40px;
   }
+}
+@media (max-width: 600px) {
   .about .content .img-card {
     min-height: 250px;
   }
