@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
+  // LOader
+ 
+// // LOader
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     header.classList.toggle("mol", window.scrollY > 0);
@@ -42,4 +45,11 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  // Acardion
+ let contBx =  document.getElementsByClassName("contBx")
+ for(i=0; i<contBx.length; i++){
+  contBx[i].addEventListener('click',function(){
+    this.classList.toggle('active')
+  })
+ }
 });

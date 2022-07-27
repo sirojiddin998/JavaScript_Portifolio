@@ -1,0 +1,25 @@
+body {
+    background-image: url(../media/footer-background-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    border-radius: 12px;
+    background: rgba(251, 252, 251, .1);
+    height: auto;
+    position: relative;
+}
+
+.malumotText {
+    margin: auto;
+    padding: 20px;
+    height: 700px;
+}
+
