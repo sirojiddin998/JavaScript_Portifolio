@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="./main.js"></script> -->
+    <title>Hujjat topshirish</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabl">
+            <div class="tab_head">
+                <div class="tab_toogls is-active">
+                    <span>
+                        <div class="tab_name">QO‘SHMA UNIVERSITETLAR</div>
+                    </span>
+                </div>
+                <div class="tab_toogls">
+                    <span>
+                        <div class="tab_name">XORIJIY FUQAROLAR</div>
+                    </span>
+                </div>
+            </div>
+            <div class="tabs_body">
+                <div class="tabs_content is-active">
+                    <h2 class="tab_title">QO‘SHMA UNIVERSITETLAR</h2>
+                    <div class="tab_content">
+                        <div class="row p-3">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Ism</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Familya</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1"
+                                        class="form-label">Sharif(Otchestvo)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Tug‘ilgan kun oy
+                                        yil</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Yashash manzili</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Telefon raqami</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                                <div class="mb-3 d-flex">
+                                    <div class="form-check px-4">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Erkak
+                                        </label>
+                                    </div>
+                                    <div class="form-check  px-4">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Ayol
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pasport nusxasi</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pasport seriya</label>
+                                    <input type="text" placeholder="AA1234567" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Attestat yoki
+                                        Diplom</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Foto 3.5x4.5</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Ta'lim shakli</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Tanlang</option>
+                                        <option value="1">Kunduzgi </option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">OTM</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                        onclick="selecteds(value)">
+                                        <option selected>Tanlang</option>
+                                        <option value="1">Mordoviya davlat universiteti (Rossiya Federatsiyas)</option>
+                                        <option value="2">Tomsk davlat universiteti (Rossiya Federatsiyas)</option>
+                                        <option value="3">Polotsk davlat universiteti (Belarus Respublikas)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Ta`lim  yo`nalishlari</label>
+                                    <select class="form-select " aria-label="Default select example" id="sels" >
+                                        <option selected>Tanlang</option>
+                                    </select>
+                                 
+                                </div>
+                                <script>
+                                     let sels = document.getElementById("sels")
+                                    function selecteds(value) {
+                                        if (value == 1) {
+                                            sels.innerHTML = `
+                                        <option selected disabled>Tanlang</option>
+                                        <option value="Biologiya (fan yo‘nalishi bo‘yicha) (Magistratura)">Biologiya (fan yo‘nalishi bo‘yicha) (Magistratura)</option>
+                                        <option value="Filologiya va tillarni o‘qitish: rus tili  (Bakalavriat)">Filologiya va tillarni o‘qitish: rus tili  (Bakalavriat)</option>
+                                        `;
+                                        }
+                                        if (value == 2) {
+                                            sels.innerHTML = `
+                                        <option selected disabled>Tanlang</option>
+                                        <option value="Biologiya (turlari bo‘yicha)  (Bakalavriat)">Biologiya (turlari bo‘yicha)  (Bakalavriat)</option>
+                                        <option value="Biznesni boshqarish (tarmoqlar bo‘yicha) (Bakalavriat)">Biznesni boshqarish (tarmoqlar bo‘yicha) (Bakalavriat)</option>
+                                        <option value="Arxivshunoslik (Bakalavriat)">Arxivshunoslik (Bakalavriat)</option>
+                                        `;
+                                        }
+                                        if (value == 3) {
+                                            sels.innerHTML = `
+                                        <option selected disabled>Tanlang</option>
+                                        <option value="Texnologik ta’lim (Bakalavriat)"> Texnologik ta’lim (Bakalavriat)</option>
+                                        <option value="Turizm (faoliyat yo‘nalishi bo‘yicha) (Bakalavriat)"> Turizm (faoliyat yo‘nalishi bo‘yicha) (Bakalavriat)</option>
+                                        `;
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs_content">
+                    <h2 class="tab_title">XORIJIY FUQOROLAR</h2>
+                    <div class="tab_content">
+                        <div class="row p-3">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Ism</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Familya</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1"
+                                        class="form-label">Sharif(Otchestvo)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Tug‘ilgan kun oy
+                                        yil</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Yashash manzili</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Fuqaroligi</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-3 my-3 d-flex">
+                                    <div class="form-check px-4">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Erkak
+                                        </label>
+                                    </div>
+                                    <div class="form-check  px-4">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Ayol
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Telefon raqami</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Foto 3.5x4.5</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pasport nusxasi</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pasport seriya</label>
+                                    <input type="text" placeholder="AA1234567" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Attestat yoki
+                                        Diplom</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Ta'lim shakli</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                        onclick="selected(value)">
+                                        <option selected>Tanlang</option>
+                                        <option value="1">Kunduzgi </option>
+                                        <option value="2">Sirtqi </option>
+                                        <option value="3">Masofaviy </option>
+                                        <option value="4">Magistratura</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="study_direct" class="form-label">Ta`lim yo`nalishlari</label>
+                                    <select class="form-select" id="sel" aria-label="Default select example">
+                                        <option selected disabled>Tanlang</option>
+                                    </select>
+                                    <script>
+                                        let sel = document.getElementById("sel")
+
+                                        function selected(value) {
+                                            if (value == 1) {
+                                                sel.innerHTML = `
+                                            <option selected disabled>Tanlang</option>
+                                            <option value="Tarix (mamlakatlar va yo‘nalishlar bo‘yicha)">Tarix (mamlakatlar va yo‘nalishlar bo‘yicha)</option>
+                                            <option value="Filologiya va tillarni o‘qitish: o‘zbek tili">Filologiya va tillarni o‘qitish: o‘zbek tili</option>
+                                            <option value="Psixologiya (faoliyat turlari bo‘yicha)">Psixologiya (faoliyat turlari bo‘yicha)</option>
+                                            <option value="Sotsiologiya">Sotsiologiya</option>
+                                            <option value="Arxivshunoslik">Arxivshunoslik</option>
+                                            <option value="Inson  resurslarini boshqarish">Inson  resurslarini boshqarish</option>
+                                            <option value="Biologiya ( turlari bo‘yicha)">Biologiya ( turlari bo‘yicha)</option>
+                                            <option value="Kimyo ( turlari bo‘yicha)">Kimyo ( turlari bo‘yicha)</option>
+                                            <option value="Geografiya">Geografiya</option>
+                                            <option value="Fizika">Fizika</option>
+                                            <option value="Mexanika va metematik modellashtirish">Mexanika va metematik modellashtirish</option>
+                                            <option value="Matematika">Matematika</option>
+                                            <option value="Amaliy matematika">Amaliy matematika</option>
+                                            <option value="Kompyuter ilmlari va dasturlash texnologiyalari ( yo‘nalishlar bo‘yicha)">Kompyuter ilmlari va dasturlash texnologiyalari ( yo‘nalishlar bo‘yicha)</option>
+                                            <option value="Kompyuter injiniringi (“ Kompyuter injiniringi” , “AT-Servis”, “ Axborot xavfsizligi”, “ Multimedia texnologiyalari”)">Kompyuter injiniringi (“ Kompyuter injiniringi” , “AT-Servis”, “ Axborot xavfsizligi”, “ Multimedia texnologiyalari”)</option>
+                                            <option value="Ekologiya va atrof-muxit muxofazasi (tarmoqlar va sohalar bo‘yicha)">Ekologiya va atrof-muxit muxofazasi (tarmoqlar va sohalar bo‘yicha)</option>
+                                            <option value="Muqobil energiya manbalari  ( turlari bo‘yicha)">Muqobil energiya manbalari  ( turlari bo‘yicha)</option>
+                                            <option value="Oziq- ovqat texnologiyasi (mahsulot turlari bo‘yicha)">Oziq- ovqat texnologiyasi (mahsulot turlari bo‘yicha)</option>
+                                            <option value="Mehmonxona xo‘jaligini tashkil etish va boshqarish">Mehmonxona xo‘jaligini tashkil etish va boshqarish</option>
+                                            <option value="Sport faoliyati ( faoliyat turlari bo‘yicha)">Sport faoliyati ( faoliyat turlari bo‘yicha)</option>
+                                            <option value="Turizm ( faoliyat yo‘nalishlari bo‘yicha)">Turizm ( faoliyat yo‘nalishlari bo‘yicha)</option>
+                                            <option value="Gid hamroxligi va tarjimonlik faoliyati (tillar bo‘yicha)">Gid hamroxligi va tarjimonlik faoliyati (tillar bo‘yicha)</option>
+                                           
+                                            `;
+                                            }
+                                            if (value == 2) {
+                                                sel.innerHTML = `
+                                            <option selected disabled>Tanlang</option>
+                                            <option value="Tarix (mamlakatlar va yoʼnalishlar boʼyicha)">Tarix (mamlakatlar va yoʼnalishlar boʼyicha)</option>
+                                            <option value="Filologiya va tillarni oʼqitish: oʼzbek tili">Filologiya va tillarni oʼqitish: oʼzbek tili</option>
+                                            <option value="Psixologiya: amaliy psixologiya">Psixologiya: amaliy psixologiya</option>
+                                            <option value="Inson resurslarini boshqarish">Inson resurslarini boshqarish</option>
+                                            <option value="Biologiya (turlari boʼyicha)">Biologiya (turlari boʼyicha)</option>
+                                            <option value="Geografiya">Geografiya</option>
+                                            <option value="Kompьyuter injiniringi: АT-Servis">Kompьyuter injiniringi: АT-Servis</option>
+                                            <option value="Sport faoliyati: boks">Sport faoliyati: boks</option>
+                                            <option value="Sport faoliyati: futbol">Sport faoliyati: futbol</option>
+                                            `;
+                                            }
+                                            if (value == 3) {
+                                                sel.innerHTML = `
+                                            <option selected disabled>Tanlang</option>
+                                            <option value="Kompyuter injiniringi (“ Kompyuter injiniringi” , “AT-Servis”, “ Axborot xavfsizligi”, “ Multimedia texnologiyalari”)">Kompyuter injiniringi (“ Kompyuter injiniringi” , “AT-Servis”, “ Axborot xavfsizligi”, “ Multimedia texnologiyalari”)</option>
+                                            `;
+                                            }
+                                            if (value == 4) {
+                                                sel.innerHTML = `
+                                            <option selected disabled>Tanlang</option>
+                                            <option value="Tarix ( yo‘nalishlar va faoliyat turi bo‘yicha)">Tarix ( yo‘nalishlar va faoliyat turi bo‘yicha)</option>
+                                            <option value="Filologiya va tillarni o‘qitish: o‘zbek tili">Filologiya va tillarni o‘qitish: o‘zbek tili</option>
+                                            <option value="Folklorshunoslik va dialektologiya">Folklorshunoslik va dialektologiya</option>
+                                            <option value="Adabiyotshunoslik: o‘zbek adabiyoti">Adabiyotshunoslik: o‘zbek adabiyoti</option>
+                                            <option value="Monopoliyaga qarshi boshqaruv va raqobatni rivojlantirish">Monopoliyaga qarshi boshqaruv va raqobatni rivojlantirish</option>
+                                            <option value="Biologiya (fan yo‘nalishi bo‘yicha )">Biologiya (fan yo‘nalishi bo‘yicha )</option>
+                                            <option value="Kimyo (fan yo‘nalishi bo‘yicha)">Kimyo (fan yo‘nalishi bo‘yicha)</option>
+                                            <option value="Geografiya (o‘rganish ob’yekti bo‘yicha)">Geografiya (o‘rganish ob’yekti bo‘yicha)</option>
+                                            <option value="Qayta tiklanuvchan energiya manbalari va barqaror airof-muhit fizikasi">Qayta tiklanuvchan energiya manbalari va barqaror airof-muhit fizikasi</option>
+                                            <option value="Yarimo‘tkazgichlar fizikasi">Yarimo‘tkazgichlar fizikasi</option>
+                                            <option value="Matematika (yo‘nalishlar bo‘yicha)">Matematika (yo‘nalishlar bo‘yicha)</option>
+                                            <option value="Kompyuter ilmlari va dasturlash texnologiyalari ( yo‘nalishlar bo‘yicha)">Kompyuter ilmlari va dasturlash texnologiyalari ( yo‘nalishlar bo‘yicha)</option>
+                                            <option value="Ekologiya( tarmoqlar va sohalar bo‘yicha)">Ekologiya( tarmoqlar va sohalar bo‘yicha)</option>
+                                            `;
+                                            }
+                                            console.log(value);
+                                        }
+                                    </script>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-danger" type="button">Bekor qilish</button>
+                    <button class="btn btn-outline-primary me-md-2" type="button">Yuborish</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            //  form.html uchun js
+            let tabl = document.querySelectorAll(".tab_toogls");
+            let contents = document.querySelectorAll(".tabs_content");
+            tabl.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    contents.forEach((content) => {
+                        content.classList.remove('is-active')
+                    })
+                    tabl.forEach((tab) => {
+                        tab.classList.remove('is-active')
+                    })
+                    contents[index].classList.add('is-active')
+                    tabl[index].classList.add('is-active')
+                })
+            })
+        </script>
+</body>
+
+</html>

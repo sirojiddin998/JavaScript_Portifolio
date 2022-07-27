@@ -1,7 +1,15 @@
 window.addEventListener("DOMContentLoaded", function () {
   // LOader
- 
-// // LOader
+  const loader_containes = document.querySelector(".loader_containes");
+  setTimeout(function () {
+    loader_containes.style.opacity = "0";
+    setTimeout(function () {
+      loader_containes.style.display = "none";
+    }, 2500);
+  }, 2500);
+// LOader
+
+
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     header.classList.toggle("mol", window.scrollY > 0);
@@ -46,10 +54,33 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
   // Acardion
- let contBx =  document.getElementsByClassName("contBx")
- for(i=0; i<contBx.length; i++){
-  contBx[i].addEventListener('click',function(){
-    this.classList.toggle('active')
-  })
- }
+//  let contBx =  document.getElementsByClassName("contBx")
+//  for(i=0; i<contBx.length; i++){
+//   contBx[i].addEventListener('click',function(){
+//     this.classList.toggle('active')
+//   })
+//   var panel = document.querySelector('.panel')
+//   panel.addEventListener("click",function(){
+//     if (panel.style.display === "block") {
+//       panel.style.display = "none";
+//     } else {
+//       panel.style.display = "block";
+//     }
+//   })
+//  }
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("actives");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
 });
